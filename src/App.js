@@ -13,7 +13,6 @@ function App() {
   const [alienSize, setAlienSize] = useState(10);
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
   const [trafficArray, setTrafficArray] = useState(['car', 'truck']);
-
   return (
     <div className="App">
       <div className="fight">
@@ -41,11 +40,11 @@ function App() {
       <TrafficLight color={lightColor} />
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
-        <button onClick={() => setLightColor()}>Red</button>
+        <button onClick={() => setLightColor('red')} >Red</button>
         {/* when you click this button, the color of the light in state should be set to 'yellow' */}
-        <button onClick={() => setLightColor()}>Yellow</button>
+        <button onClick={() => setLightColor('yellow')}>Yellow</button>
         {/* when you click this button, the color of the light in state should be set to 'green' */}
-        <button>Green</button>
+        <button onClick={() => setLightColor('green')}>Green</button>
       </div>
       {/* 
       the VehicleList component takes in one prop: vehicles.
